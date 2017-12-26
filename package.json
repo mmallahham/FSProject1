@@ -3,17 +3,25 @@
   "version": "1.0.0",
   "description": "Full Stack cource at Lexicon Institue",
   "scripts": {
-    "start": "node buildScripts/srcServer.js",
+    "start": "npm-run-all --parallel sec-check open:src",
+    "open:src": "babel-node buildScripts/srcServer.js",
     "sec-check": "nsp check",
     "share": "lt -p 3000 --subdomain fsproject1"
   },
   "author": "Mohammad Allahham",
   "license": "MIT",
   "dependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-latest": "^6.16.0",
+    "babel-register": "^6.16.3",
     "express": "^4.16.2",
+    "npm-run-all": "^4.1.2",
     "nsp": "2.6.2",
     "open": "0.0.5",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "webpack": "^1.15.0"
   },
   "devDependencies": {}
 }
