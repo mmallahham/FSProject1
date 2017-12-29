@@ -2,6 +2,7 @@
   "name": "full-stack-project-1",
   "version": "1.0.0",
   "description": "Full Stack cource at Lexicon Institue",
+  "repository":"https://github.com/mmallahham/FSProject1.git",
   "scripts": {
     "start": "npm-run-all --parallel sec-check open:src",
     "open:src": "babel-node buildScripts/srcServer.js",
@@ -23,5 +24,7 @@
     "path": "^0.12.7",
     "webpack": "^1.15.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "eslint": "^4.14.0"
+  }
 }
