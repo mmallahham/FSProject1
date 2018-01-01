@@ -1,4 +1,4 @@
-import "./index.css";
+import './index.css';
 
 debugger;
 console.log("fgdfgd fgfgdfg ");
