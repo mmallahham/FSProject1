@@ -1,4 +1,4 @@
 import './index.css';
+import {getUsers} from './api/usersApi';
 
-debugger;
-console.log("fgdfgd fgfgdfg ");
+console.log(getUsers());

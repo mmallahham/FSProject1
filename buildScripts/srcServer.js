@@ -20,6 +20,14 @@ app.get('/', function(req, res) {
 });
 
 
+app.get('/users', function(req, res) {
+  res.json([
+    {name:'dfgdg'},
+    {name:'reter'},
+    {name:'xcvvc'}
+  ]);
+});
+
 app.listen(port, function(err) {
   if (err) {
    // console.log(err);

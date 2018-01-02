@@ -4,12 +4,14 @@
   "description": "Full Stack cource at Lexicon Institue",
   "repository": "https://github.com/mmallahham/FSProject1.git",
   "scripts": {
-    "start": "npm-run-all --parallel sec-check open:src",
+    "start": "npm-run-all --parallel sec-check open:src lint:watch test:watch",
     "open:src": "babel-node buildScripts/srcServer.js",
     "sec-check": "nsp check",
     "share": "lt -p 3000 --subdomain fsproject1",
     "lint": "esw buildScripts/*.js , src/js/*.js",
-    "test": "mocha --reporter progress buildScripts/testSetup.js \"src/**/*.test.js\""
+    "lint:watch": "npm run lint -- --watch",
+    "test": "mocha --reporter progress buildScripts/testSetup.js \"src/**/*.test.js\"",
+    "test:watch": "npm run test -- --watch"
   },
   "author": "Mohammad Allahham",
   "license": "MIT",
@@ -35,6 +37,7 @@
     "eslint": "^4.14.0",
     "eslint-plugin-import": "^2.8.0",
     "jsdom": "^11.5.1",
-    "mocha": "^4.1.0"
+    "mocha": "^4.1.0",
+    "whatwg-fetch": "^2.0.3"
   }
 }
